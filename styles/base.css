@@ -11,6 +11,11 @@ body {
     background-color: #f4f4f4;
 }
 
+#course-title {
+    font-weight: 700;
+    color: #fff;
+}
+
 header {
     background: linear-gradient(135deg, #6d84b0 0%, #203763 100%);
     color: white;

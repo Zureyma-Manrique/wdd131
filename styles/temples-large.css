@@ -1,0 +1,95 @@
+@media (min-width: 768px) {
+    /* Header adjustments for larger screens */
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Navigation for larger screens */
+    #menu-toggle {
+        display: none;
+    }
+    
+    #navigation {
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0;
+    }
+    
+    #navigation li {
+        width: auto;
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 500;
+    }
+    
+    .nav-link:hover {
+        transform: translateY(-2px);
+        background-color: rgba(255,255,255,0.25);
+    }
+    
+    /* Main content adjustments */
+    main {
+        padding: 3rem 2rem;
+    }
+    
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    /* Temple gallery grid for larger screens */
+    .temple-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+    }
+    
+    /* Figure enhancements */
+    figure img {
+        height: 280px;
+        transition: transform 0.3s ease;
+    }
+    
+    figure:hover img {
+        transform: scale(1.05);
+    }
+    
+    figcaption {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+    
+    /* Footer adjustments */
+    footer {
+        padding: 2.5rem 2rem;
+    }
+    
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    .temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    
+    main {
+        padding: 4rem 2rem;
+    }
+    
+    main h1 {
+        font-size: 3rem;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+}

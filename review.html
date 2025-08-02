@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - Thank You!</title>
+    <meta name="description" content="This is the final view for the user after send the review form.">
+    <meta name="author" content="Zureyma Quetzaili Manrique Santiago">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/review-confirmation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="success-icon">✓</div>
+            <h1>Review Submitted!</h1>
+            <p>Thank you for your valuable feedback</p>
+        </div>
+
+        <div class="content">
+            <div class="review-summary">
+                <h2>Review Summary</h2>
+                <div id="reviewDetails">
+                    <!-- Form details will be populated here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="counter-section">
+                <h3>Total Reviews Completed</h3>
+                <div class="counter" id="reviewCounter">0</div>
+                <p>You've helped make our products better!</p>
+            </div>
+
+            <div class="actions">
+                <a href="form.html" class="btn btn-primary">Submit Another Review</a>
+                <a href="#" class="btn btn-secondary" onclick="window.history.back()">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Product Review System. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/reviewConfirmation.js" defer></script>
+</body>
+</html>

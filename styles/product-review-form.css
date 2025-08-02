@@ -57,6 +57,12 @@ label {
     font-size: 1.1em;
 }
 
+.required-label::after {
+    content: " *";
+    color: #e74c3c;
+    font-weight: bold;
+}
+
 input[type="text"],
 input[type="date"],
 select,
@@ -75,9 +81,9 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #2980b9;
     background: white;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.1);
 }
 
 select {
@@ -109,19 +115,11 @@ textarea {
 
 .rating-item:hover {
     background: #e3f2fd;
-    border-color: #3498db;
+    border-color: #2980b9;
 }
 
 .rating-item input[type="radio"] {
     display: none;
-}
-
-.rating-item input[type="radio"]:checked+.rating-label {
-    color: #f39c12;
-}
-
-.rating-item input[type="radio"]:checked~* {
-    color: #f39c12;
 }
 
 .rating-item.checked {

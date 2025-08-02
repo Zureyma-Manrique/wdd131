@@ -12,7 +12,7 @@ function populateProducts() {
     const select = document.getElementById('productName');
     products.forEach(product => {
         const option = document.createElement('option');
-        option.value = product.name;
+        option.value = product.id; // Use ID as value per rubric
         option.textContent = product.name;
         select.appendChild(option);
     });
@@ -27,7 +27,10 @@ function setupRatingInteraction() {
 
         radio.addEventListener('change', function () {
             // Remove checked class from all items
-            ratingItems.forEach(i => i.classList.remove('checked'));
+            ratingItems.forEach(i => {
+                i.classList.remove('checked');
+                i.querySelector('.stars').style.color = '#ddd';
+            });
             // Add checked class to selected item
             if (this.checked) {
                 item.classList.add('checked');

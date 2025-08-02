@@ -6,7 +6,17 @@ function displayReviewDetails() {
     // Product Name
     const productName = urlParams.get('productName');
     if (productName) {
-        addSummaryItem('Product', productName);
+        // Find the product name by ID
+        const products = [
+            { id: "fc-1888", name: "Flux Capacitor" },
+            { id: "fc-2050", name: "Power Laces" },
+            { id: "fs-1987", name: "Time Circuits" },
+            { id: "ac-2000", name: "Low Voltage Reactor" },
+            { id: "jj-1969", name: "Warp Equalizer" }
+        ];
+        const product = products.find(p => p.id === productName);
+        const displayName = product ? product.name : productName;
+        addSummaryItem('Product', displayName);
     }
 
     // Rating

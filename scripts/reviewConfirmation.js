@@ -1,21 +1,22 @@
+// Product array (same as form page)
+const products = [
+    { id: "fc-1888", name: "Flux Capacitor" },
+    { id: "fc-2050", name: "Power Laces" },
+    { id: "fs-1987", name: "Time Circuits" },
+    { id: "ac-2000", name: "Low Voltage Reactor" },
+    { id: "jj-1969", name: "Warp Equalizer" }
+];
+
 // Get URL parameters and display review details
 function displayReviewDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const reviewDetails = document.getElementById('reviewDetails');
 
-    // Product Name
-    const productName = urlParams.get('productName');
-    if (productName) {
-        // Find the product name by ID
-        const products = [
-            { id: "fc-1888", name: "Flux Capacitor" },
-            { id: "fc-2050", name: "Power Laces" },
-            { id: "fs-1987", name: "Time Circuits" },
-            { id: "ac-2000", name: "Low Voltage Reactor" },
-            { id: "jj-1969", name: "Warp Equalizer" }
-        ];
-        const product = products.find(p => p.id === productName);
-        const displayName = product ? product.name : productName;
+    // Product Name - now using ID to find name
+    const productId = urlParams.get('productName');
+    if (productId) {
+        const product = products.find(p => p.id === productId);
+        const displayName = product ? product.name : productId;
         addSummaryItem('Product', displayName);
     }
 
